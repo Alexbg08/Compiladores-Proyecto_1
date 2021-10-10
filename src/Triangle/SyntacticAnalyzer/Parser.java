@@ -623,8 +623,8 @@ public class Parser {
       break;
 
     /**
-     * @authors D.A. Watt and D.F. Brown, Luis Chavarría
-     * @version 1.2 Se actualizo el parseo del varDeclaration para que tambien acepte la declaración de variable inicializada
+     * @authors D.A. Watt and D.F. Brown, Luis ChavarrÃ­a
+     * @version 1.2 Se actualizo el parseo del varDeclaration para que tambien acepte la declaraciÃ³n de variable inicializada
      */
     case Token.VAR:
       {
@@ -641,10 +641,7 @@ public class Parser {
             finish(declarationPos);
             declarationAST = new VarDeclaration(iAST, eAST, declarationPos);
         }
-        accept(Token.COLON);
-        TypeDenoter tAST = parseTypeDenoter();
-        finish(declarationPos);
-        declarationAST = new VarDeclaration(iAST, tAST, declarationPos);
+        
       }
       break;
 
